@@ -1,0 +1,41 @@
+{
+  "name": "eosjs-light",
+  "version": "0.0.1",
+  "description": "Lightweight EOSJS alternative",
+  "license": "MIT",
+  "repository": "eosrapid/eosjs-light",
+  "author": {
+    "name": "EOS Rapid",
+    "email": "rapid@eosrapid.com",
+    "url": "https://eosrapid.com"
+  },
+  "amdName":"eosjsLight",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "source": "src/eosjs-light.js",
+  "main": "dist/eosjs-light.js",
+  "module": "dist/eosjs-light.module.js",
+  "unpkg": "dist/eosjs-light.umd.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "yarn test -- --coverage",
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "clean": "rimraf dist",
+    "prebuild": "yarn run clean",
+    "prerelease": "yarn test && yarn run build",
+    "release": "standard-version",
+    "minor": "yarn run release -- --release-as minor",
+    "postpublish": "git push origin master --follow-tags"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-jest": "25.1.0",
+    "jest": "25.1.0",
+    "microbundle": "0.11.0",
+    "rimraf": "3.0.2",
+    "standard-version": "7.1.0"
+  }
+}
