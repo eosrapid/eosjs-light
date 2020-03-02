@@ -61,6 +61,7 @@ function sendReq(url, jsonBody, callback, options) {
 }
 
 function sendReqPromise(url, jsonBody, options) {
+  options = options || {};
   if(options.fetch){
     return options.fetch(url, {
       body: jsonBody == null ? '{}' : JSON.stringify(jsonBody),
