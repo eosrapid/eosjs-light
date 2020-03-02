@@ -19,7 +19,7 @@
   "module": "dist/eosjs-light.module.js",
   "unpkg": "dist/eosjs-light.umd.js",
   "scripts": {
-    "test": "jest",
+    "test": "yarn run build && jest",
     "coverage": "yarn test -- --coverage",
     "build": "microbundle",
     "dev": "microbundle watch",
@@ -29,6 +29,9 @@
     "release": "standard-version",
     "minor": "yarn run release -- --release-as minor",
     "postpublish": "git push origin master --follow-tags"
+  },
+  "transform": {
+    "^.+\\.[t|j]sx?$": "babel-jest"
   },
   "dependencies": {},
   "devDependencies": {

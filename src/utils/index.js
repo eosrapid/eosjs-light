@@ -50,7 +50,7 @@ function sendReq(url, jsonBody, callback, options) {
 
   var xhr = new (options.XMLHttpRequest?options.XMLHttpRequest:XMLHttpRequest)();
   xhr.onload = function (e) {
-    processCbEos(e.responseText, callback);
+    processCbEos(xhr.responseText, callback);
   };
   xhr.onerror = function (e) {
     callback(e);
