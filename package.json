@@ -1,6 +1,6 @@
 {
   "name": "eosjs-light",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lightweight EOSJS alternative",
   "license": "MIT",
   "repository": "eosrapid/eosjs-light",
