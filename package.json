@@ -9,7 +9,7 @@
     "email": "rapid@eosrapid.com",
     "url": "https://eosrapid.com"
   },
-  "amdName":"eosjsLight",
+  "amdName": "eosjsLight",
   "files": [
     "dist",
     "src"
@@ -35,7 +35,9 @@
     "babel-jest": "25.1.0",
     "jest": "25.1.0",
     "microbundle": "0.11.0",
+    "node-fetch": "2.6.0",
     "rimraf": "3.0.2",
-    "standard-version": "7.1.0"
+    "standard-version": "7.1.0",
+    "xmlhttprequest": "1.8.0"
   }
 }
