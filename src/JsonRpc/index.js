@@ -48,7 +48,7 @@ function JsonRpc(apiUrl, options) {
     get_info: genReqProm('/v1/chain/get_info'),
     get_producer_schedule: genReqProm('/v1/chain/get_producer_schedule'),
     get_producers: function (json, lowerBound, limit) {
-      return genReqProm('/v1/chain/get_currency_stats')({
+      return genReqProm('/v1/chain/get_producers')({
         json: ifUndefX(json, true),
         lowerBound: ifUndefX(lowerBound, ''),
         limit: ifUndefX(limit, 50),
